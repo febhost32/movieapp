@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { BASE_URL, MOVIE_IMAGE_URL, API_KEY } from "../constants/constants";
+import movieCard from '../components/moviecard';
 
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
 
         </div>
 
-        //TODO : How to call API?
+        //Todo : Create Card component, Make Card component contain each value of API, 
         
         
 
