@@ -10,12 +10,14 @@ const Home = () => {
 
     const getMovie = () => {
         axios.get(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}`).then(res => setListMovie(res.data));
-
     }
+
     console.log(listMovie);
+
     useEffect(() => {
         getMovie();
     },[]);
+
     return (
 
         <div> 
@@ -27,11 +29,17 @@ const Home = () => {
             
         </div>
 
-        //Todo : Create Card component, Make Card component contain each value of API, 
+        //Todo : Create Card component, Make Card component contain each value of API, Done
+        //useEffect is a function call after the DOM is loaded
+        //Add CSS Styling , No need for this one
+        //Move API Calls into Services using Redux, Next Time.
+        //Bonus point if you can do from input
+        
+
         
         
 
-    )
+    );
 
 }
 

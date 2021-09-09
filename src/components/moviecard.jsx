@@ -1,4 +1,4 @@
-import './moviecard.css'
+import '../styles/moviecard.css'
 import { MOVIE_IMAGE_URL } from '../constants/constants';
 
 const MovieCard = ({...props}) => {
