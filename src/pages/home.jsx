@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { BASE_URL, API_KEY } from "../constants/constants";
 import MovieCard from '../components/moviecard';
-import { Typography, Paper, Grid, makeStyles } from '@material-ui/core';
+import { Typography, Paper, Grid, makeStyles, Box } from '@material-ui/core';
 
 const Home = () => {
 
@@ -35,33 +35,34 @@ const Home = () => {
     return (
         <Paper className={classes.root}>
         
-
-            <Typography variant ="h5" component = "h3"> 
+            <Typography variant ="h3" component = "h3"> 
             Movie Database
             </Typography>
 
-            <Grid
-                    container
-                    direction="column"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
+            <div style ={{ width : "100%"}}>
+            <Box display ="flex">          
+                <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
                 >
+                    
+                <Grid item>
             {listMovie.results && listMovie.results.map((item, index) => {
-                return(
-                <div key={index}><MovieCard data={item} />
-                </div>
-               
+                return(     
+                    <Grid item key={index}>    
+                        <MovieCard data={item}/>
+                    </Grid>
                 );
-            })}
-            
-            </Grid>
+            })};
+                    
+                </Grid>
+           </Grid>
         
-
-        
+            </Box>
+            </div>
         </Paper>
-        
-        
-
     );
 
 }

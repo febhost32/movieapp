@@ -10,12 +10,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
-
-
 const MovieCard = ({...props}) => {
     const {data} = props;
    
-    
     const useStyles = makeStyles (theme => ({
         root: {
             maxWidth: 345,
@@ -25,8 +22,6 @@ const MovieCard = ({...props}) => {
           },
     }));
     
-
-
     const classes = useStyles();
 
     return (
@@ -38,7 +33,6 @@ const MovieCard = ({...props}) => {
             image={`${MOVIE_IMAGE_URL}${data.backdrop_path}`}
             title={data.title}
             />
-            
             <CardContent>
                 <Typography gutterBottom variant ="h5" component ="h2">
                     {data.title}
@@ -50,14 +44,9 @@ const MovieCard = ({...props}) => {
         </CardActionArea>
         <CardActions>
             <Button size="small" color="primary">
-                Share
-            </Button>
-            <Button size="small" color="primary">
                 Learn More
             </Button>
-
         </CardActions>
-
     </Card>
 
     )
